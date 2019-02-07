@@ -15,8 +15,6 @@ export class App extends Component {
 		})
 	}
 
-
-
 	constructor(props) {
 
 		super(props);
@@ -26,12 +24,8 @@ export class App extends Component {
 			searchTerm: ''
 		};
 
-
 		this.getData();
-
-
 	}
-
 	// updateTerm(newTerm) {
 	// 	this.setState({searchTerm: newTerm});
 	// 	console.log('new', this.state.searchTerm);
@@ -40,9 +34,6 @@ export class App extends Component {
 	// <EventTeam data={this.state.infoData}/>
 
   render() {
-
-
-
   	var containerStyle = {
   		marginLeft: '0',
   		marginRight: '0',
@@ -58,16 +49,27 @@ export class App extends Component {
   		paddingTop: '25',
   		marginBottom: '0'
   	}
-
+	  
     return (
-    	<div>
-    		<div style={containerStyle}>
-    			<h3 style={h3Style}>Team Members</h3>
-    		</div>
-    		<div className="container-fluid list-group" style={{paddingRight:'0'}}>
-    			<SearchBar data={this.state.infoData} />
-    		</div>
-    		<EventTeam data={this.state.infoData}/>
+    	<div className="App" style={{backgroundColor:'#F0F0F0'}}>
+			<div style={containerStyle}>
+				<h3 style={h3Style}>Team Members</h3>
+				<div className="container">
+					<div className="row">
+						<div className=" col-lg-offset-2 col-lg-10">
+				
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className="d-flex flex-row" style={{paddingRight:'0'}}>
+			<div className="col-md-6" >
+				<SearchBar data={this.state.infoData} />
+				</div>
+				<div className="col-md-6" >
+			 {this.state.infoData.length} People		</div>
+			</div>
+				<EventTeam data={this.state.infoData}/>
     	</div>
     );
   }

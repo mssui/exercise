@@ -17,13 +17,26 @@ class SearchBar extends Component {
 
 	render() {
 		return (
-			<div className="container-fluid" style={{border: '1px solid darkgrey', padding: '10px'}} className="align-center col-md-12">
-				<input
+			<div className="container">
+			
+
+			<div className="form-group has-feedback">
+			
+				<input type="text" className="form-control"
 				value={this.state.term}
-				onChange={event => this.onInputChange(event.target.value)}
-				placeholder="Find by name...">
-				</input>
+							onChange={event => this.onInputChange(event.target.value)}
+							placeholder="&#xF002; Find by name"
+							style={{borderRadius: '4px', fontFamily:"Arial, FontAwesome"}}
+				/>
+
+				
+
+				<span className="form-control-feedback">
+				
+   				 </span>
 			</div>
+			</div>
+
 		);
 	}
 

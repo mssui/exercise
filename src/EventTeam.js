@@ -12,12 +12,13 @@ const EventTeam = (props) => {
 	})
 
 	return (
-			<ul className="container-fluid list-group" style={{paddingRight:'0'}}>
+	
+			<ul className="container-fluid list-group" style={{paddingRight:'0', borderRadius: '10px', backgroundColor:'white'}}>
 				{teams}
 			</ul>
+			
 		);
 };
-
 
 
 export default EventTeam;
