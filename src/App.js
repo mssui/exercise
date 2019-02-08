@@ -22,11 +22,12 @@ export class App extends Component {
 		this.state = {
 			infoData: [],
 			searchTerm: "",
-			isHidden: 1
 		  };
 	  
 		  this.getData();
 		}
+
+		 // infodata empty , loader
 		// updateTerm(newTerm) {
 		// 	this.setState({searchTerm: newTerm});
 		// 	console.log('new', this.state.searchTerm);
@@ -73,8 +74,10 @@ export class App extends Component {
     			<SearchBar data={this.state.infoData} />
     		</div>
     		
-    
-		<EventTeam data={this.state.infoData}/>
+			{this.state.infoData !== null && (
+          <EventTeam apiData={this.state.apiData} data={this.state.infoData} />
+        	)}
+		
 		
 			</div>
 		  );

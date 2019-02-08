@@ -34,7 +34,7 @@ const EventTeamItem = ({ team, key, handleClick, isHidden }) => {
 			<i className="fa fa-chevron-right" />
 			<div className="col-md-1">
 			  <i
-				onClick={() => handleClick(team.id)}
+				onClick={() => handleClick(key)}
 				className={
 				  !isHidden ? "fa fa-chevron-down" : "fa fa-chevron-right"
 				}
