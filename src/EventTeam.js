@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import EventTeamItem from './EventTeamItem';
 
+
 export class EventTeam extends Component {
 	constructor(props) {
 	  super(props);

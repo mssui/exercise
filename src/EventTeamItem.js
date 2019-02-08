@@ -1,14 +1,9 @@
-import React, { Component } from 'react';
-import SearchBar from './search_bar';
+import React from 'react';
 
 
 const EventTeamItem = ({ team, key, handleClick, isHidden }) => {
-	console.log(team);
-  
-	// var person = {
-	// 	height: 50px;
-	// 	border: 1px solid darkgrey;
-	// }
+	
+
 	return (
 	  <div
 		className="container"
@@ -30,8 +25,6 @@ const EventTeamItem = ({ team, key, handleClick, isHidden }) => {
 			</div>
 			<div style={{ fontSize: 13, color: "lightgrey" }}>{team.email}</div>
 		  </div>
-		  <div className="col-md-1">
-			<i className="fa fa-chevron-right" />
 			<div className="col-md-1">
 			  <i
 				onClick={() => handleClick(key)}
@@ -41,12 +34,13 @@ const EventTeamItem = ({ team, key, handleClick, isHidden }) => {
 				aria-hidden="true"
 			  />
 			</div>
+			
 			<div className="container" style={{ backgroundColor: "#F0F0F0" }}>
-			  {!isHidden && team.phone}
-
-		 {/* Clear isHidden condition */}
+			{(!isHidden && team.phone) ?  
+			<div>{ team.phone }</div>
+			: null}
+			  
 			</div>
-		  </div>
 		</div>
 	  </div>
 	);
