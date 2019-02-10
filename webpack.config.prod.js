@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var combineLoaders = require('webpack-combine-loaders');
 
 module.exports = {
   devtool: 'source-map',
@@ -33,3 +34,4 @@ module.exports = {
   ]
   }
 };
+

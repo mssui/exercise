@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var combineLoaders = require('webpack-combine-loaders');
 
 module.exports = {
   // or devtool: 'eval' to debug issues with compiled output:
@@ -27,8 +28,8 @@ module.exports = {
       test: /\.js$/,
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
-    }
-  ]
+    }]
+  
   }
 };
 
